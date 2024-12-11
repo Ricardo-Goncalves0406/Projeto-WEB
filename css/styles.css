@@ -56,12 +56,14 @@ header {
 }
 
 
-body.dark-mode {
+body.dark-mode 
+{
     background-color: #333;
     color: #fff;
 }
 
 body.dark-mode header {
+    
     background-color: #444;
 }
 
@@ -70,5 +72,6 @@ body.dark-mode a, body.dark-mode button {
 }
 
 body.dark-mode a:hover {
-    color: #66ccff;
+    color: #e7eef1;
 }
+
