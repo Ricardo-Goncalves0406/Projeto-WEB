@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Projeto Programação Web</title>
 </head>
@@ -13,31 +11,61 @@
     <header>
         <nav class="menu left">
             <ul>
-                <li><a href="">Paises </a>
+                <li><a href="">Paises</a></li>
                 <li><a href="">Loja</a></li>
                 <li><a href="">Contactos</a></li>
                 <li><a href="">Favoritos</a></li>
 
             </ul>
         </nav>
-        </div class="menu right">
-        <a href="" class="login">login</a>
-        <a href="" class="carrinho">carrinho</a>
-        <button class="darkmode-toggle">Modo escuro</button>
+        <div class="menu right">
+            <a href="" class="login">login</a>
+            <a href="" class="carrinho">carrinho</a>
+            <button onclick="toggleDarkmode()">Modo escuro</button>
         </div>
 
     </header>
+    
 
+    <div class="container mt-3">
+        <label for="opcoes">Linguagem</label>
+        <select id="opcoes" class="form-control mb-5">
+            <option value="opcao1">Português</option>
+            <option value="opcao2">Inglês</option>
+        </select>
+    </div>
 
-    <label for="opcoes">Linguagem</label>
-    <select id="opcoes">
-        <option value="opcao1">Português</option>
-        <option value="opcao2">Inglês</option>
-
-    </select>
-
-    <script src="script.js"></script>
-
+    <main class="container my-5">
+        <section id="home" class="mb-5">
+            <h2>Home</h2>
+            <p>Bem-Vindo ao espaço onde podes adquirir informações sobre os Países</p> 
+        
+        </section>
+        <section id="about" class="mb-5">
+            <h2>Sobre</h2>
+            <p>Informações sobre o site.</p>
+        </section>
+        <section id="contact" class="mb-5">
+            <h2>Contato</h2>
+            <p>Alguma dúvida? Entre em contacto conosco</p>
+        </section>
+    </main>
+    
+    <section>
+    <div class="imagens-container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Img/portugal.webp" class="centered img-responsive" alt="Portugal">
+                    <img src="Img/espanha.png" class="centered img-responsive" alt="Espanha">
+                    <img src="img/França.jpg" class="centered img-responsive" alt="França">
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    </section>
+        
 </body>
 
 </html>
