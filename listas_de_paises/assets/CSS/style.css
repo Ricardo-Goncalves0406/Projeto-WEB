@@ -1,0 +1,86 @@
+header {
+    
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+.menu.left ul {
+    list-style-type: none;
+    display: flex;
+    padding-left:0;
+}
+
+.menu.left li {
+    margin-right: 20px;
+}
+
+.menu.left a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu.right
+{
+    display: flex;
+    align-items: center;
+}
+
+.menu.right a, .menu.right button {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu.right button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Adicionando moldura fina em torno das bandeiras */
+.imagem-pais {
+    max-height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto 10px auto; /* Coloca a bandeira logo abaixo do nome do país */
+    border: 2px solid #ccc; /* Moldura fina */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Alinhando o nome do país e centralizando */
+.titulo-pais {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Cor azul */
+    text-transform: uppercase;
+    text-align: center; /* Centraliza o nome do país */
+    margin-bottom: 10px; /* Espaço entre o nome e a bandeira */
+}
+
+/* Alinhando o conteúdo e garantindo que as bandeiras e texto fiquem bem distribuídos */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center; /* Garante que o conteúdo dentro do card fique alinhado */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que o corpo do card ocupe o espaço restante */
+    padding: 1rem;
+}
+
+/* Evitar que o conteúdo se estique demais */
+.card-text {
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}

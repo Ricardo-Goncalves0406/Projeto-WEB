@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Projeto Programação Web</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu left">
+            <ul>
+                <li><a href="#">Paises</a></li>
+                <li><a href="#">Loja</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="menu right">
+            <a href="#" class="loginBtn" onclick="openLoginModal()">Login</a>
+            <a href="#" class="carrinho">Carrinho</a>
+            <button onclick="toggleDarkmode()">Modo escuro</button>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="home" class="mb-5">
+            <h2>Home</h2>
+            <p>Bem-vindo ao espaço onde você pode adquirir informações sobre os Países.</p>
+        </section>
+        <section id="about" class="mb-5">
+            <h2>Sobre</h2>
+            <p>Informações sobre o site.</p>
+        </section>
+        <section id="contact" class="mb-5">
+            <h2>Contato</h2>
+            <p>Alguma dúvida? Entre em contato conosco!</p>
+        </section>
+    </main>
+
+    <section>
+        <div class="cards-container">
+            <div class=card">
+                <img src="img/portugal.webp" alt="Portugal">
+                <h5 class="card-title">Portugal</h5>
+                <p class="card-text">Conheça um dos países que faz parte da Europa</p>
+                <div class="card-footer">
+                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/espanha.png" alt="Espanha">
+                <h5 class="card-title">Espanha</h5>
+                <p class="card-text">Conheça o que Espanha tem para lhe mostrar!!</p>
+                <div class="card-footer">
+                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/França.jpg" alt="França">
+                <h5 class="card-title">França</h5>
+                <p class="card-text">Visite a capital de frança e se encate a ver a Torre Eifel</p>
+                <div class="card-footer">
+                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal de Login -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal" onclick="closeLoginModal()">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Usuário:</label><br>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="password">Senha:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>
