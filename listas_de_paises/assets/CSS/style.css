@@ -1,48 +1,104 @@
+/*Homepage*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+
+}
+
 header {
-    
-    background-color: #000000;
+
+    background-color: #19c962;
     color: #fff;
-    padding: 10px 20px;
-    display:flex;
+    padding: 20px 20px;
+    display: flex;
     text-align: center;
     justify-content: space-between;
-    
+    width: 100%;
+
 }
 
-.menu.left ul {
-    list-style-type: none;
+
+.menu {
     display: flex;
-    padding-left:0;
-}
-
-.menu.left li {
-    margin-right: 20px;
-}
-
-.menu.left a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-}
-
-.menu.right
-{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.menu.right a, .menu.right button {
-    margin-left: 20px;
+.menu.left,
+.menu.right {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.menu li a {
     text-decoration: none;
     color: #fff;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    border-radius: 20px;
     font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.menu.right button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.menu li a:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra ao passar o mouse */
+    transform: translateY(-2px);
+    /* Efeito de elevação */
 }
+
+.menu.right li a {
+    background-color: #007BFF;
+    /* Cor diferenciada para o menu da direita */
+}
+
+.menu.right li a:hover {
+    background-color: #0056b3;
+}
+
+/* card de texto*/
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+main {
+    margin-top: 60px;
+}
+
+
+
+
+/* para telemóveis */
+@media (max-width: 768px) {
+    .menu.left ul {
+        display: flex flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.right {
+        display: flex flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 
 /* Adicionando moldura fina em torno das bandeiras */
@@ -50,19 +106,25 @@ header {
     max-height: 150px;
     object-fit: contain;
     display: block;
-    margin: 15px auto 10px auto; /* Coloca a bandeira logo abaixo do nome do país */
-    border: 2px solid #ccc; /* Moldura fina */
-    border-radius: 5px; /* Bordas arredondadas */
+    margin: 15px auto 10px auto;
+    /* Coloca a bandeira logo abaixo do nome do país */
+    border: 2px solid #ccc;
+    /* Moldura fina */
+    border-radius: 5px;
+    /* Bordas arredondadas */
 }
 
 /* Alinhando o nome do país e centralizando */
 .titulo-pais {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff; /* Cor azul */
+    color: #007bff;
+    /* Cor azul */
     text-transform: uppercase;
-    text-align: center; /* Centraliza o nome do país */
-    margin-bottom: 10px; /* Espaço entre o nome e a bandeira */
+    text-align: center;
+    /* Centraliza o nome do país */
+    margin-bottom: 10px;
+    /* Espaço entre o nome e a bandeira */
 }
 
 /* Alinhando o conteúdo e garantindo que as bandeiras e texto fiquem bem distribuídos */
@@ -71,11 +133,13 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    text-align: center; /* Garante que o conteúdo dentro do card fique alinhado */
+    text-align: center;
+    /* Garante que o conteúdo dentro do card fique alinhado */
 }
 
 .card-body {
-    flex-grow: 1; /* Permite que o corpo do card ocupe o espaço restante */
+    flex-grow: 1;
+    /* Permite que o corpo do card ocupe o espaço restante */
     padding: 1rem;
 }
 
@@ -83,4 +147,114 @@ header {
 .card-text {
     word-wrap: break-word;
     margin-bottom: 10px;
+}
+
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    text-align: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 20%;
+    color: #007bff;
+}
+
+#tabela-pais {
+    display: none;
+    /* Deixa a tabela oculta inicialmente */
+}
+
+
+
+
+/* Botão de Login */
+.login-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Modal de Login */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 80%; /* Largura máxima de 90% para dispositivos móveis */
+    max-width: 400px; /* Largura fixa em dispositivos maiores */
+    height: auto; /* Altura ajustável */
+}
+
+.modal.hidden {
+    display: none;
+    
+}
+
+.modal.active {
+    display: flex;
+    /* Exibe o modal */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal input,
+.modal button {
+    margin: 10px 0;
+    width: 100%;
+    padding: 8px;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+button,
+.login-btn {
+    border: none;
+    /* Remove a borda */
+    outline: none;
+    /* Remove o foco padrão */
 }

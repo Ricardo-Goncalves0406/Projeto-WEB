@@ -59,35 +59,13 @@ header {
 }
 
 .menu.right li a {
-    background-color: #007BFF; /* Cor diferenciada para o menu da direita */
+    background-color: #007BFF; 
+
 }
 
 .menu.right li a:hover {
     background-color: #0056b3;
 }
-
-/* card de texto*/
-h1,
-h2 {
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1.5rem;
-}
-
-main {
-    margin-top: 60px;
-}
-
-
-.container {
-    padding: 20px;
-}
-
-
-
-
 
 /* para telemóveis */
 @media (max-width: 768px) {
@@ -106,57 +84,19 @@ main {
 
 
 
-
-/* Seção de Países */
-.featured-countries {
-    padding: 40px;
+.header h1 {
     text-align: center;
-    background-color: white;
-    
-}
-
-#countries-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.country-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #e7eff0;
-    width: 300px;
-     text-align: center;
-    margin: 10px; /* Nova margem */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione sombra para destaque */
-    
-    margin: 10px; /* Nova margem */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione sombra para destaque */        
-}
-
-.country-card img {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: c
-}
-
-.country-card h3 {
-    font-size: 1.5rem; /* Tamanho fixo para os títulos */
-    color: #0a0e13;
-    margin: 10px 0;
     font-weight: bold;
 }
 
-.country-card p {
-    font-size: 1rem; /* Tamanho uniforme para os textos */
-    color: #555;
-    margin: 5px 0;
+.table{
+    margin: 1px auto;
+    border: 1px;
 }
 
-
+.td {
+    padding: 10px;
+}
 
 /* Botão de Login */
 .login-btn {
@@ -171,7 +111,7 @@ main {
 }
 
 .login-btn:hover {
-    background-color: #0056b3;
+    background-color: #007BFF;
     }
 
     
@@ -185,7 +125,7 @@ main {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(168, 34, 34, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -194,7 +134,7 @@ main {
 }
 
 .modal.active {
-    display: flex; /* Exibe o modal */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;

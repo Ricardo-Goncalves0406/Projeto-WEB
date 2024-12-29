@@ -10,33 +10,51 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav class="menu left">
-                <ul>
-                    <li><a href="#">Paises</a></li>
-                    <li><a href="#">Loja</a></li>
-                    <li><a href="#">Contactos</a></li>
-                    <li><a href="#">Favoritos</a></li>
-                </ul>
-            </nav>
-            <div class="menu right">
-                <a href="#" class="loginBtn" onclick="openLoginModal()">Login</a>
-                <a href="#" class="carrinho">Carrinho</a>
-                <button onclick="toggleDarkmode()">Modo escuro</button>
-            </div>
-        </header>
+    <header>
+        <nav class="menu">
+
+            <ul class="menu left">
+                <a href="http://127.0.0.1:5500/Homepage/Homepage.html#">
+                    <img src="assets/img/Logotipo ESTG_horizontal.png" alt="Logótipo da ESTG_horizontal" height="40"></a>
+                <li><a href="http://127.0.0.1:5500/Homepage/Homepage.html#">Homepage</a></li>
+                <li><a href="http://127.0.0.1:5500/listas_de_paises/listapaises.html">Paises</a></li>
+                <li><a href="#">Loja</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Favoritos</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu right">
+            <button id="login-button" class="login-btn">Login</button>
+            <li><a href="#" class="carrinho">Carrinho</a></li>
+        </div>
+
+    </header>
+
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content"></div>
+        <span class="close" id="close-modal">&times;</span>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Insira seu usuário" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Insira sua senha" required>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
-    <div class="mb-3">
-        <label for="titulo" class="form-label">Pesquisar País</label>
+
+
+    <div>
+        <label for="titulo" class="form-label">País</label>
         <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o nome do país">
     </div>
-    <button type="submit" class="btn btn-primary" id="btn-search">Pesquisar</button>
+    <div>
+        <button type="submit" class="btn btn-primary" id="btn-search">Pesquisar</button>
+    </div>
 
-    <section id="zonaConteudo" class="mt-4">
-        <header>
-            <h2 class="titulo-lista">Resultados</h2>
-        </header>
+
+    <section id="zonaConteudo">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 lista-paises">
             <div class="col card-pais" style="display: none;">
                 <div class="card shadow-sm">
@@ -50,7 +68,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary"
-                                onclick="verDetalhes(this)">Ver</button>
+                                onclick="verDetalhes(paiseDados)">Ver</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary btn-favoritos"
                                 onclick="addFavoritos()">Adicionar aos favoritos</button>
                         </div>
@@ -71,8 +89,10 @@
     </footer>
     </div>
 
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/lista.js"></script>
 </body>
 
 </html>

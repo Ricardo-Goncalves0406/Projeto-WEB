@@ -4,25 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Projeto Programação Web</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Homepage</title>
 </head>
 
 <body>
     <header>
-        <nav class="menu left">
-            <ul>
-                <li><a href="#">Paises</a></li>
+        <nav class="menu">
+            <ul class="menu left">
+                
+                <a href="http://127.0.0.1:5500/Homepage/Homepage.html#" target="blank" >
+                    <img src="assets/img/Logotipo ESTG_horizontal.png" alt="Logótipo da ESTG_horizontal" height="40"></a>
+                <li><a href="http://127.0.0.1:5500/Homepage/Homepage.html#">Homepage</a></li>
+                <li><a href="http://127.0.0.1:5500/listas_de_paises/listapaises.html">Paises</a></li>
                 <li><a href="#">Loja</a></li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="http://127.0.0.1:5500/contactos/contactos.html">Contactos</a></li>
                 <li><a href="#">Favoritos</a></li>
             </ul>
         </nav>
+
         <div class="menu right">
-            <a href="#" class="loginBtn" onclick="openLoginModal()">Login</a>
-            <a href="#" class="carrinho">Carrinho</a>
-            <button onclick="toggleDarkmode()">Modo escuro</button>
+            <button id="login-button" class="login-btn">Login</button>
+            <li><a href="#" class="carrinho">Carrinho</a></li>
         </div>
+
     </header>
 
     <main class="container my-5">
@@ -38,52 +43,38 @@
             <h2>Contato</h2>
             <p>Alguma dúvida? Entre em contato conosco!</p>
         </section>
+
     </main>
 
-    <section>
-        <div class="cards-container">
-            <div class=card">
-                <img src="img/portugal.webp" alt="Portugal">
-                <h5 class="card-title">Portugal</h5>
-                <p class="card-text">Conheça um dos países que faz parte da Europa</p>
-                <div class="card-footer">
-                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/espanha.png" alt="Espanha">
-                <h5 class="card-title">Espanha</h5>
-                <p class="card-text">Conheça o que Espanha tem para lhe mostrar!!</p>
-                <div class="card-footer">
-                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/França.jpg" alt="França">
-                <h5 class="card-title">França</h5>
-                <p class="card-text">Visite a capital de frança e se encate a ver a Torre Eifel</p>
-                <div class="card-footer">
-                    <button id="favoritesButton" onclick="toggleFavorites()">Favoritos</button>
-                </div>
-            </div>
-        </div>
-        </div>
+    <main>
 
-        <!-- Modal de Login -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="closeModal" onclick="closeLoginModal()">&times;</span>
-                <h2>Login</h2>
-                <form>
-                    <label for="username">Usuário:</label><br>
-                    <input type="text" id="username" name="username" required><br><br>
-                    <label for="password">Senha:</label><br>
-                    <input type="password" id="password" name="password" required><br><br>
-                    <button type="submit">Entrar</button>
-                </form>
+        <section class="featured-countries">
+            <h2>Países em Destaque</h2>
+            <div id="countries-container">
+                <!-- Os países serão carregados dinamicamente aqui -->
             </div>
+        </section>
+    </main>
+
+    <!-- Modal de Login -->
+    
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" placeholder="Insira seu usuário" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Insira sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
         </div>
-    </section>
+    </div>
+
+
+
+
+    <script src="assets/js/script.js" defer></script>
 
 
 
