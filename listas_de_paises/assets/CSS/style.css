@@ -13,7 +13,7 @@ body {
 
 header {
 
-    background-color: #19c962;
+    background-color:  #2cebd1;
     color: #fff;
     padding: 20px 20px;
     display: flex;
@@ -68,6 +68,40 @@ header {
 .menu.right li a:hover {
     background-color: #0056b3;
 }
+
+/* Estilo do botão "Loja" */
+.menu li a.store-btn {
+    background-color: #6c757d;
+    /* Cinza */
+    color: #fff;
+    border: 1px solid #5a6268;
+    /* Cinza escuro para o contorno */
+    position: relative;
+}
+
+/* Efeito de hover para o botão "Loja" */
+.menu li a.store-btn:hover {
+    background-color: #5a6268;
+    /* Cinza mais escuro no hover */
+
+}
+
+.menu li a.carrinho-btn {
+    background-color: #6c757d;
+    /* Cinza */
+    color: #fff;
+    border: 1px solid #5a6268;
+    /* Cinza escuro para o contorno */
+    position: relative;
+}
+
+
+.menu li a.carrinho-btn:hover {
+    background-color: #5a6268;
+    /* Cinza mais escuro no hover */
+
+}
+
 
 /* card de texto*/
 h1,
@@ -175,8 +209,6 @@ main {
 }
 
 
-
-
 /* Botão de Login */
 .login-btn {
     text-decoration: none;
@@ -197,6 +229,7 @@ main {
 /* Modal de Login */
 .modal {
     display: none;
+    /* Oculto por padrão */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -204,16 +237,12 @@ main {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    width: 80%; /* Largura máxima de 90% para dispositivos móveis */
-    max-width: 400px; /* Largura fixa em dispositivos maiores */
-    height: auto; /* Altura ajustável */
 }
 
 .modal.hidden {
     display: none;
-    
+    /* Classe para esconder o modal */
 }
 
 .modal.active {

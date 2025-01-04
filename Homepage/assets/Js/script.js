@@ -18,6 +18,7 @@ async function fetchCountries() {
     });
 }
 
+
 // Exibir Modal de Login
 const loginButton = document.getElementById('login-button');
 const loginModal = document.getElementById('login-modal');
@@ -35,13 +36,7 @@ closeModal.addEventListener('click', () => {
     loginModal.classList.add('hidden');
 });
 
-// Fechar modal ao clicar fora
-window.addEventListener('click', (event) => {
-    if (event.target === loginModal) {
-        loginModal.classList.remove('active'); // Ocultar modal
-        loginModal.classList.add('hidden');
-    }
-});
+
 
 // Inicializar a página dos paises em destaque
 document.addEventListener('DOMContentLoaded', fetchCountries);
@@ -56,4 +51,19 @@ randomCountries.forEach(country => {
         <p><strong>Continente:</strong> ${country.region}</p>
     `;
     countriesContainer.appendChild(card);
+});
+
+//botão loja (mensagem de erro)
+document.getElementById('store-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede a navegação do link
+    
+    // Exibe o alerta simples
+    alert("Loja está em manutenção.");
+});
+
+// Botão do carrinho (mensagem de erro)
+document.getElementById('carrinho-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede a navegação do link
+
+    alert("O carrinho está em manutenção.");
 });

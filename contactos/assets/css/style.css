@@ -13,7 +13,7 @@ body {
 
 header {
 
-    background-color: #19c962;
+    background-color: #2cebd1;
     color: #fff;
     padding: 20px 20px;
     display: flex;
@@ -22,7 +22,6 @@ header {
     width: 100%;
     
 }
-
 
 .menu {
     display: flex;
@@ -67,36 +66,17 @@ header {
     background-color: #0056b3;
 }
 
-/* para telemóveis */
-@media (max-width: 768px) {
-    .menu.left ul {
-        display: flex 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu.right {
-        display: flex 
-        flex-direction: column;
-        align-items: center;
-    }
+/* Estilo do botão "Loja" */
+.menu li a.store-btn {
+    background-color: #6c757d;
+    /* Cinza */
+    color: #fff;
+    border: 1px solid #5a6268;
+    /* Cinza escuro para o contorno */
+    position: relative;
 }
 
 
-
-.header h1 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.table{
-    margin: 1px auto;
-    border: 1px;
-}
-
-.td {
-    padding: 10px;
-}
 
 /* Botão de Login */
 .login-btn {
@@ -111,13 +91,91 @@ header {
 }
 
 .login-btn:hover {
-    background-color: #007BFF;
-    }
+    background-color: #0056b3;
+}
 
-    
-    /* Modal de Login */
+
+.container 
+{
+    margin-top: 50px;
+}
+
+.header h1 
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.table
+{
+    margin: 2px ;
+    border: 1px;
+}
+
+.td 
+{
+    padding: 10px;
+}
+
+/* Adiciona a borda preta ao redor do formulário de suporte */
+.support-form {
+    border: 2px solid black; /* Borda preta ao redor do formulário */
+    padding: 20px; /* Espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para as caixas de texto (input, textarea, select) */
+.support-form input, 
+.support-form textarea, 
+.support-form select {
+    border: 2px solid black; /* Borda preta de 2px */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+    margin-top: 5px; /* Espaço acima da caixa de texto */
+    margin-bottom: 15px; /* Espaço abaixo da caixa de texto */
+}
+
+/* Botão de envio */
+.support-form button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto no botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Sem borda no botão */
+    border-radius: 5px; /* Bordas arredondadas no botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+
+.support-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Botão de Login */
+.login-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Modal de Login */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
+    /* Oculto por padrão */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -125,16 +183,17 @@ header {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
 .modal.hidden {
-    display: none; /* Classe para esconder o modal */
+    display: none;
+    /* Classe para esconder o modal */
 }
 
 .modal.active {
-    display: flex; 
+    display: flex;
+    /* Exibe o modal */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -166,8 +225,30 @@ header {
 .modal button:hover {
     background-color: #45a049;
 }
+button,
+.login-btn {
+    border: none;
+    /* Remove a borda */
+    outline: none;
+    /* Remove o foco padrão */
+}
 
-button, .login-btn {
-    border: none; /* Remove a borda */
-    outline: none; /* Remove o foco padrão */
+
+/* para telemóveis */
+@media (max-width: 768px) {
+    .menu.left ul {
+        display: flex 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.right {
+        display: flex 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal {
+        width: 90%; /* Torna o modal mais responsivo */
+    }
 }

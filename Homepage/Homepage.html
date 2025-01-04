@@ -12,20 +12,21 @@
     <header>
         <nav class="menu">
             <ul class="menu left">
-                
-                <a href="http://127.0.0.1:5500/Homepage/Homepage.html#" target="blank" >
-                    <img src="assets/img/Logotipo ESTG_horizontal.png" alt="Logótipo da ESTG_horizontal" height="40"></a>
+
+                <a href="http://127.0.0.1:5500/Homepage/Homepage.html#" target="blank">
+                    <img src="assets/img/Logotipo ESTG_horizontal.png" alt="Logótipo da ESTG_horizontal"
+                        height="40"></a>
                 <li><a href="http://127.0.0.1:5500/Homepage/Homepage.html#">Homepage</a></li>
                 <li><a href="http://127.0.0.1:5500/listas_de_paises/listapaises.html">Paises</a></li>
-                <li><a href="#">Loja</a></li>
+                <li><a href="#" class="store-btn" id="store-btn">Loja</a></li>
                 <li><a href="http://127.0.0.1:5500/contactos/contactos.html">Contactos</a></li>
-                <li><a href="#">Favoritos</a></li>
+                <li><a href="http://127.0.0.1:5500/Favoritos/favoritos.html">Favoritos</a></li>
             </ul>
         </nav>
 
         <div class="menu right">
             <button id="login-button" class="login-btn">Login</button>
-            <li><a href="#" class="carrinho">Carrinho</a></li>
+            <li><a href="#" class="carrinho-btn" id="carrinho-btn">Carrinho</a></li>
         </div>
 
     </header>
@@ -43,11 +44,9 @@
             <h2>Contato</h2>
             <p>Alguma dúvida? Entre em contato conosco!</p>
         </section>
-
     </main>
 
     <main>
-
         <section class="featured-countries">
             <h2>Países em Destaque</h2>
             <div id="countries-container">
@@ -57,7 +56,7 @@
     </main>
 
     <!-- Modal de Login -->
-    
+
     <div id="login-modal" class="modal hidden">
         <div class="modal-content">
             <span class="close" id="close-modal">&times;</span>
@@ -71,12 +70,19 @@
         </div>
     </div>
 
+    <footer class="text-muted py-5">
 
+        <div class="container">
+            <p>2024, IPLeiria</p>
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+    </div>
 
 
     <script src="assets/js/script.js" defer></script>
-
-
 
 
 </body>

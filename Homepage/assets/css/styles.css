@@ -13,14 +13,15 @@ body {
 
 header {
 
-    background-color: #19c962;
+    background-color: #2cebd1;
     color: #fff;
     padding: 20px 20px;
     display: flex;
     text-align: center;
     justify-content: space-between;
     width: 100%;
-    
+    box-sizing: border-box;
+
 }
 
 
@@ -30,6 +31,7 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
+    with: 100%
 }
 
 .menu.left,
@@ -54,22 +56,64 @@ header {
 
 .menu li a:hover {
     background-color: #0056b3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de elevação */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra ao passar o mouse */
+    transform: translateY(-2px);
+    /* Efeito de elevação */
 }
 
 .menu.right li a {
-    background-color: #007BFF; /* Cor diferenciada para o menu da direita */
+    background-color: #007BFF;
+    /* Cor diferenciada para o menu da direita */
 }
 
 .menu.right li a:hover {
     background-color: #0056b3;
+
 }
+
+/* Estilo do botão "Loja" */
+.menu li a.store-btn {
+    background-color: #6c757d;
+    /* Cinza */
+    color: #fff;
+    border: 1px solid #5a6268;
+    /* Cinza escuro para o contorno */
+    position: relative;
+}
+
+/* Efeito de hover para o botão "Loja" */
+.menu li a.store-btn:hover {
+    background-color: #5a6268;
+    /* Cinza mais escuro no hover */
+
+}
+
+.menu li a.carrinho-btn {
+    background-color: #6c757d;
+    /* Cinza */
+    color: #fff;
+    border: 1px solid #5a6268;
+    /* Cinza escuro para o contorno */
+    position: relative;
+}
+
+
+.menu li a.carrinho-btn:hover {
+    background-color: #5a6268;
+    /* Cinza mais escuro no hover */
+
+}
+
 
 /* card de texto*/
 h1,
 h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+
 }
 
 p {
@@ -83,37 +127,17 @@ main {
 
 .container {
     padding: 20px;
+    align-items: center
 }
-
-
-
-
-
-/* para telemóveis */
-@media (max-width: 768px) {
-    .menu.left ul {
-        display: flex 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu.right {
-        display: flex 
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
 
 /* Seção de Países */
 .featured-countries {
     padding: 40px;
     text-align: center;
     background-color: white;
-    
+
 }
+
 
 #countries-container {
     display: flex;
@@ -128,30 +152,31 @@ main {
     padding: 10px;
     background-color: #e7eff0;
     width: 300px;
-     text-align: center;
-    margin: 10px; /* Nova margem */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione sombra para destaque */
-    
-    margin: 10px; /* Nova margem */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicione sombra para destaque */        
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 5px;
+    /* sombra para os destaque */
 }
+
 
 .country-card img {
     width: 100%;
     height: 150px;
     border-radius: 10px;
-    object-fit: c
+    object-fit: cover;
 }
 
 .country-card h3 {
-    font-size: 1.5rem; /* Tamanho fixo para os títulos */
+    font-size: 1.5rem;
+    /* Tamanho fixo para os títulos */
     color: #0a0e13;
     margin: 10px 0;
     font-weight: bold;
 }
 
 .country-card p {
-    font-size: 1rem; /* Tamanho uniforme para os textos */
+    font-size: 1rem;
+    /* Tamanho uniforme para os textos */
     color: #555;
     margin: 5px 0;
 }
@@ -172,12 +197,13 @@ main {
 
 .login-btn:hover {
     background-color: #0056b3;
-    }
+}
 
-    
-    /* Modal de Login */
+
+/* Modal de Login */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
+    /* Oculto por padrão */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -185,16 +211,17 @@ main {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(168, 34, 34, 0.2);
     z-index: 10;
 }
 
 .modal.hidden {
-    display: none; /* Classe para esconder o modal */
+    display: none;
+    /* Classe para esconder o modal */
 }
 
 .modal.active {
-    display: flex; /* Exibe o modal */
+    display: flex;
+    /* Exibe o modal */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -227,7 +254,49 @@ main {
     background-color: #45a049;
 }
 
-button, .login-btn {
-    border: none; /* Remove a borda */
-    outline: none; /* Remove o foco padrão */
+button,
+.login-btn {
+    border: none;
+    /* Remove a borda */
+    outline: none;
+    /* Remove o foco padrão */
+}
+
+/* para telemóveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Alinha os itens verticalmente */
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .menu {
+        flex-direction: column;
+        /* Alinha os itens em coluna */
+        align-items: center;
+        gap: 10px;
+        /* Adiciona espaço entre os itens */
+        width: 100%;
+        /* Garante que ocupa toda a largura */
+    }
+
+    .menu.left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu li {
+        width: auto;
+    }
+
 }
